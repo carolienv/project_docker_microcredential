@@ -1,12 +1,25 @@
-FROM <base imagae>
+# Only pip-installable Python packages required. Slim image will be sufficient
+# and will reduce size.
+FROM python:3.9-slim
 
-# TODO: Set a working directory
+# Set default working directory
+WORKDIR /app
 
-# TODO: Copy the requirements.txt file to the working directory
+# Copy requirements file
+COPY requirements.txt .
 
-# TODO: Install the Python dependencies
+# Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# TODO: Copy the training script (train.py) to the working directory
+# Copy the training script (train.py) to the working directory
+COPY train.py .
 
-# TODO: Run the training script that generates the model
-CMD [...]
+# Run the training script that generates the model
+CMD ["python", "train.py"]
+
+# HOW TO:
+# 1. Build container
+# docker build . -f Dockerfile.train --tag train-model:1.0
+# 2. Run container, for some reason I can't use the relative path to 
+# mount volume, but it works if I use pwd variable.
+# docker run --rm -v "$(pwd)/models:/app/models" train-model:1.0 
