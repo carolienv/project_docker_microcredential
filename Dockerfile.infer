@@ -28,3 +28,5 @@ CMD ["python", "server.py"]
 # You can check running containers with `docker container ls`. 
 # As long as container is running we can access the server via http://localhost:8080
 # You can stop server from running by using `docker rm -f ModelServer
+# Running the container like this doesn't do a lot besides hosting the server and 
+# printing a hello message.
