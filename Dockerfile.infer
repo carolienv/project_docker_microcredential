@@ -1,7 +1,30 @@
-WORKDIR /app
-COPY requirements.txt .
-COPY server.py .
+# Base image to use
 FROM python:3.9-slim
-CMD ["python", "server.py"]
+
+# Set working directory
+WORKDIR /app
+
+# Copy requirements file to working directory
+COPY requirements.txt .
+
+# Install Python packages
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the script to the working directory 
+COPY server.py .
+
+# Define port for hosting
 EXPOSE 8080
+
+# Define commands to be executed when running this container.
+CMD ["python", "server.py"]
+
+# HOW TO:
+# 1. Build container
+# docker build . -f Dockerfile.infer --tag serve-model:1.0
+# 2. Run container
+# docker run --detach --name ModelServer --rm -p 8080:8080 -v "$(pwd)/models:/app/models" serve-model:1.0
+# This detaches the running container, so it keeps running in the background
+# You can check running containers with `docker container ls`. 
+# As long as container is running we can access the server via http://localhost:8080
+# You can stop server from running by using `docker rm -f ModelServer
