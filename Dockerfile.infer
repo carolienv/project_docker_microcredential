@@ -30,3 +30,7 @@ CMD ["python", "server.py"]
 # You can stop server from running by using `docker rm -f ModelServer
 # Running the container like this doesn't do a lot besides hosting the server and 
 # printing a hello message.
+# Cfr. https://apxml.com/courses/fastapi-ml-deployment/chapter-3-integrating-ml-models/practice-model-prediction-service
+# The following actually does the prediction. Feels counter intuïtive not to be able to do/see this in the browser. 
+# curl -X POST http://localhost:8080/predict -H "Content-Type: application/json"  -d '{"input": [1, 1, 1, 1]}'
+# I'm not fully grasping the concept of API and POST requests
