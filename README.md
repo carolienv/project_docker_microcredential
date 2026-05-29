@@ -10,12 +10,12 @@ In this project, you will train, run and serve a machine learning model using Do
 - [x] Containerize serving of the machine learning model
 - [x] Train and run the machine learning model using Docker
 - [x] Run the Docker container serving the machine learning model
-- [ ] Store the Docker images on your personal account on Docker Hub
-- [ ] Provide the resulting Dockerfiles in GitHub
-- [ ] Build an Apptainer image on a HPC of your choice
-- [ ] Provide the logs of the slurm job in GitHub
-- [ ] Document the steps in a text document in GitHub
-- [ ] Send a zip file of your gitrepository when you are done (that is what will be evaluated)
+- [x] Store the Docker images on your personal account on Docker Hub
+- [x] Provide the resulting Dockerfiles in GitHub
+- [x] Build an Apptainer image on a HPC of your choice
+- [x] Provide the logs of the slurm job in GitHub
+- [x] Document the steps in a text document in GitHub
+- [x] Send a zip file of your gitrepository when you are done (that is what will be evaluated)
 
 ## Proposed steps - containerize and run training the machine learning model
 
