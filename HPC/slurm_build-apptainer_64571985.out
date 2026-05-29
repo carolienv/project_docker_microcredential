@@ -1,0 +1,8 @@
+=== Inspect training image ===
+=== Inspect serve image ===
+=== Report resources usage ===
+JobID         Partition    Elapsed      State   TotalCPU     MaxRSS     AveRSS 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- 
+64571985          doduo   00:00:43    RUNNING   00:00:00                       
+64571985.ba+              00:00:43    RUNNING   00:00:00                       
+64571985.ex+              00:00:43    RUNNING   00:00:00                       
